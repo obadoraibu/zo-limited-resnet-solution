@@ -10,7 +10,7 @@ class ZeroOrderOptimizer:
     def __init__(
         self,
         model: nn.Module,
-        lr: float = 3e-2,
+        lr: float = 7e-2,
         eps: float = 1e-4,
         perturbation_mode: str = "rademacher",
     ) -> None:

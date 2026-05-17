@@ -1,13 +1,13 @@
 ## Experiment Report: Zero-Order Fine-Tuning of ResNet18
 
-The goal of this experiment was to improve the zero-order fine-tuning baseline for a pretrained ResNet18 under a limited training budget. The baseline result was approximately **1.22% top-1 validation accuracy**, while the final submitted configuration reached **1.50% top-1 validation accuracy**.
+The goal of this experiment was to improve the zero-order fine-tuning baseline for a pretrained ResNet18 under a limited training budget. The baseline result was approximately **1.22% top-1 validation accuracy**, while the final submitted configuration reached **1.68% top-1 validation accuracy**.
 
 The final configuration used:
 
 ```text
 batch_size = 64
 n_batches = 128
-learning_rate = 3e-2
+learning_rate = 7e-2
 epsilon = 1e-4
 perturbation = Rademacher / SPSA-style
 momentum = 0.9
@@ -30,13 +30,13 @@ The final validation result was:
 {
   "val_accuracy_top1_imagenet_head": 0.0037,
   "val_accuracy_top1_init_head": 0.0122,
-  "val_accuracy_top1_finetuned": 0.015,
+  "val_accuracy_top1_finetuned": 0.0168,
   "n_batches": 128,
   "batch_size": 64
 }
 ```
 
-Compared with the baseline value of **0.0122**, the final result improved the score to **0.0150** (relative improvement of roughly **23%**).
+Compared with the baseline value of **0.0122**, the final result improved the score to **0.0168**.
 
 
 ## Main Ideas Behind the Experiments
